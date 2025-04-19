@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Research Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>8VC x Meta x HackDuke CodeFest</h1>
+            <h2>Deep Research Assistant</h2>
+        </header>
+
+        <div class="theme-toggle">
+            <button id="theme-button">
+                <span class="theme-icon light-icon">☀️</span>
+                <span class="theme-icon dark-icon">🌙</span>
+            </button>
+        </div>
+
+        <div id="initial-search" class="search-container">
+            <input type="text" id="search-input" placeholder="Ask the LLM to do anything..." autofocus>
+            <button id="search-button">Submit</button>
+        </div>
+
+        <div id="chat-container" class="hidden">
+            <div id="chat-history"></div>
+            
+            <div id="follow-up-search" class="search-container hidden">
+                <input type="text" id="follow-up-input" placeholder="Ask a follow-up question...">
+                <button id="follow-up-button">Submit</button>
+            </div>
+        </div>
+
+        <button id="reset-button" class="hidden">Reset</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
